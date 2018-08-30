@@ -1,0 +1,35 @@
+infunisa_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: INFUNISAUserBundle:Default:index }
+
+infunisa_user_index:
+    path:       /user/index
+    defaults: {_controller: INFUNISAUserBundle:User:index }
+
+infunisa_user_add:
+    path:       /user/add
+    defaults: {_controller: INFUNISAUserBundle:User:add }
+    
+infunisa_user_create:
+    path:       /user/create
+    defaults: {_controller: INFUNISAUserBundle:User:create }
+    methods: POST
+    
+infunisa_user_edit:
+    path:       /user/edit/{id}
+    defaults: {_controller: INFUNISAUserBundle:User:edit }
+    
+infunisa_user_view:
+    path:       /user/view/{id}
+    defaults: {_controller: INFUNISAUserBundle:User:view }
+    
+infunisa_user_delete:
+    path:       /user/delete/{id}
+    defaults: {_controller: INFUNISAUserBundle:User:delete }
+    
+infunisa_user_redirect_add:
+    path: /user/create
+    defaults:
+        _controller: INFUNISAUserBundle:User:add
+        path: /user/add
+        permanent: true

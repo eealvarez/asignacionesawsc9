@@ -1,0 +1,5 @@
+{% for flashMessage in app.session.flashbag.get('mensaje') %} {# flashMessage, el nombre del mensaje para mostrarlo en nuestra vista, es decir, almacenando el msj en esa variable #}
+        <div class="alert alert-success" role="alert"> {#estilos de bootstrap#}
+            <div class="container">{{ flashMessage }}</div> {#Symfony para ostrar este tipo de msj está utilizando una sesión temporal, luego de refrescar la página se quita#}
+        </div>
+    {% endfor %}
